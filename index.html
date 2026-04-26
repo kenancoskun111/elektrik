@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Çerkezköy Elektrikçi | Arıza, Bakım, Onarım, Aydınlatma, Kamera Sistemleri</title>
+<meta name="description" content="Çerkezköy Elektrikçi – ev elektriği, arıza bakım onarım, priz, avize, kablo çekimi, aydınlatma, internet ve kamera sistemleri kurulumu. 7/24 hızlı hizmet."/>
+<meta name="keywords" content="çerkezköy elektrikçi, elektrik arıza, elektrik bakım onarım, priz montajı, avize takımı, kablo çekimi, aydınlatma, internet kurulumu, kamera sistemleri"/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet"/>
+<style>
+/* ══════════════════════════════════════════
+   GLOBAL
+══════════════════════════════════════════ */
+:root{
+  --bk:#090b0f;--deep:#0f1218;--panel:#14171e;--card:#181c24;
+  --br:#222730;--br2:#2c3140;
+  --y:#f5c400;--yg:rgba(245,196,0,.13);--or:#ff6b1a;
+  --wh:#edeae4;--gr:#7a8090;--lt:#b8b4ac;--gn:#22c55e;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bk);color:var(--wh);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden}
+
+/* ══════════════════════════════════════════
+   SITE — HEADER
+══════════════════════════════════════════ */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(9,11,15,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--br);height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo-bolt{width:38px;height:38px;background:var(--y);display:flex;align-items:center;justify-content:center;clip-path:polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%)}
+.logo-bolt svg{width:18px;height:18px}
+.logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.05rem;letter-spacing:.05em;line-height:1.15;color:var(--wh)}
+.logo-name em{color:var(--y);font-style:normal}
+nav{display:flex;gap:30px}
+nav a{color:var(--gr);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:color .2s}
+nav a:hover{color:var(--y)}
+.nav-cta{display:flex;align-items:center;gap:8px;background:var(--y);color:var(--bk);text-decoration:none;padding:9px 18px;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;transition:background .2s}
+.nav-cta:hover{background:var(--or)}
+
+/* ══════════════════════════════════════════
+   SITE — HERO
+══════════════════════════════════════════ */
+#anasayfa{min-height:100vh;padding:120px 5vw 80px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hglow{position:absolute;right:-5%;top:10%;width:55vw;height:70vh;background:radial-gradient(ellipse,rgba(245,196,0,.07) 0%,transparent 65%);pointer-events:none}
+.hglow2{position:absolute;left:-10%;bottom:0;width:40vw;height:50vh;background:radial-gradient(ellipse,rgba(255,107,26,.05) 0%,transparent 65%);pointer-events:none}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(var(--br) 1px,transparent 1px),linear-gradient(90deg,var(--br) 1px,transparent 1px);background-size:64px 64px;opacity:.2;mask-image:linear-gradient(to bottom,transparent,black 25%,black 75%,transparent)}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(245,196,0,.3);background:rgba(245,196,0,.07);color:var(--y);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;width:fit-content;margin-bottom:26px;animation:fadeUp .7s ease both}
+.bdot{width:6px;height:6px;border-radius:50%;background:var(--y);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,11vw,9.5rem);line-height:.88;letter-spacing:.015em;animation:fadeUp .7s ease .1s both}
+.hero-h1 .l1{display:block;color:var(--wh)}
+.hero-h1 .l2{display:block;color:transparent;-webkit-text-stroke:1.5px var(--y)}
+.hero-h1 .l3{display:block;color:var(--y)}
+.hero-p{max-width:500px;margin-top:22px;font-size:1rem;color:var(--lt);line-height:1.75;animation:fadeUp .7s ease .2s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;animation:fadeUp .7s ease .3s both}
+.btn-y{background:var(--y);color:var(--bk);border:none;padding:15px 34px;font-family:'Barlow',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:8px}
+.btn-y:hover{background:var(--or);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--br2);color:var(--lt);background:transparent;padding:14px 34px;font-family:'Barlow',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--y);color:var(--y)}
+.hero-side{position:absolute;right:5vw;bottom:80px;display:flex;flex-direction:column;gap:32px;text-align:right;animation:fadeUp .7s ease .4s both}
+.hs-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--y);line-height:1}
+.hs-lbl{font-size:.7rem;color:var(--gr);letter-spacing:.1em;text-transform:uppercase}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* TICKER */
+.ticker{background:var(--y);overflow:hidden;padding:11px 0}
+.ticker-track{display:inline-flex;white-space:nowrap;animation:tickerAnim 22s linear infinite}
+.tick{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bk);padding:0 28px}
+.tsep{color:rgba(0,0,0,.3)}
+@keyframes tickerAnim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION COMMONS */
+.sp{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--y);margin-bottom:12px}
+.sh2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.6rem);line-height:1;letter-spacing:.01em;margin-bottom:12px}
+.sd{color:var(--gr);font-size:.95rem;line-height:1.7;max-width:480px;margin-bottom:52px}
+
+/* SERVICES */
+#hizmetler{padding:96px 5vw;background:var(--deep)}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:1px;background:var(--br);border:1px solid var(--br)}
+.srv-card{background:var(--panel);padding:34px 30px;position:relative;overflow:hidden;transition:background .25s}
+.srv-card:hover{background:var(--card)}
+.srv-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--y),var(--or));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.srv-card:hover::after{transform:scaleX(1)}
+.srv-ico{font-size:1.6rem;margin-bottom:18px;width:50px;height:50px;background:var(--yg);border:1px solid rgba(245,196,0,.15);display:flex;align-items:center;justify-content:center}
+.srv-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;letter-spacing:.03em;margin-bottom:8px}
+.srv-desc{font-size:.85rem;color:var(--gr);line-height:1.65}
+.srv-img{width:100%;height:140px;object-fit:cover;margin-bottom:14px;border:1px solid var(--br);display:none}
+.srv-img.has-img{display:block}
+.srv-n{position:absolute;bottom:14px;right:18px;font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:rgba(245,196,0,.04);line-height:1;pointer-events:none}
+
+/* REVIEWS */
+#yorumlar{padding:96px 5vw;background:var(--bk)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rev-card{background:var(--panel);border:1px solid var(--br);padding:28px 26px;position:relative;transition:border-color .25s,transform .25s}
+.rev-card:hover{border-color:rgba(245,196,0,.25);transform:translateY(-4px)}
+.rev-stars{display:flex;gap:3px;margin-bottom:14px}
+.rev-stars span{color:var(--y);font-size:1rem}
+.rev-text{font-size:.92rem;color:var(--lt);line-height:1.7;font-style:italic;margin-bottom:18px}
+.rev-author{display:flex;align-items:center;gap:12px}
+.rev-av{width:38px;height:38px;border-radius:50%;background:var(--y);color:var(--bk);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rev-name{font-weight:600;font-size:.9rem}
+.rev-loc{font-size:.75rem;color:var(--gr);margin-top:2px}
+.rev-q{position:absolute;top:20px;right:22px;font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(245,196,0,.06);line-height:1;pointer-events:none}
+
+/* WHY */
+#neden-biz{padding:96px 5vw;background:var(--deep);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.why-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,9rem);line-height:.9;-webkit-text-stroke:1px rgba(245,196,0,.12);color:transparent;user-select:none}
+.why-art{position:relative}
+.why-chip{position:absolute;bottom:0;right:0;background:var(--y);color:var(--bk);padding:22px 26px}
+.why-chip-n{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1}
+.why-chip-t{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.why-ul{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:38px}
+.why-li{display:flex;gap:14px;align-items:flex-start}
+.why-dot{width:7px;height:7px;background:var(--y);flex-shrink:0;margin-top:8px}
+.why-lt{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.03em;margin-bottom:3px}
+.why-ld{font-size:.84rem;color:var(--gr);line-height:1.6}
+
+/* CTA STRIP */
+.cta-strip{background:var(--y);padding:56px 5vw;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-strip-t{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,3.2rem);color:var(--bk);line-height:1}
+.cta-strip-s{font-size:.9rem;color:rgba(0,0,0,.6);margin-top:6px}
+.btn-bk{background:var(--bk);color:var(--y);border:none;padding:16px 36px;font-family:'Barlow',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:background .2s;flex-shrink:0}
+.btn-bk:hover{background:var(--deep)}
+
+/* CONTACT */
+#iletisim{padding:96px 5vw;background:var(--bk)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:52px}
+.cinfo{display:flex;flex-direction:column;gap:16px}
+.cblock{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--br);padding:20px 22px;transition:border-color .2s}
+.cblock:hover{border-color:rgba(245,196,0,.25)}
+.cico{width:38px;height:38px;flex-shrink:0;background:var(--yg);border:1px solid rgba(245,196,0,.15);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.clbl{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--y);margin-bottom:3px}
+.cval{font-size:.95rem;font-weight:500}
+.csub{font-size:.78rem;color:var(--gr);margin-top:2px}
+.cform{display:flex;flex-direction:column;gap:14px}
+.crow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gr)}
+.fg input,.fg select,.fg textarea{background:var(--panel);border:1px solid var(--br);color:var(--wh);padding:11px 13px;font-family:'Barlow',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;resize:vertical}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--y)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--br2)}
+.fg select option{background:var(--panel)}
+.fsub{background:var(--y);color:var(--bk);border:none;padding:14px;font-family:'Barlow',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .15s;width:100%}
+.fsub:hover{background:var(--or);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--deep);border-top:1px solid var(--br);padding:36px 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.fcopy{font-size:.78rem;color:var(--gr)}
+.flinks{display:flex;gap:22px}
+.flinks a{font-size:.76rem;color:var(--gr);text-decoration:none;letter-spacing:.05em;transition:color .2s}
+.flinks a:hover{color:var(--y)}
+
+/* FLOATING CALL */
+.fcall{position:fixed;bottom:26px;right:26px;z-index:200}
+.fcall a{display:flex;align-items:center;gap:10px;background:var(--y);color:var(--bk);text-decoration:none;padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 6px 28px rgba(245,196,0,.45);transition:background .2s,transform .2s;animation:glow 2.5s ease-in-out infinite}
+.fcall a:hover{background:var(--or);transform:translateY(-3px)}
+.fci{font-size:1.1rem;animation:ring 2.5s ease-in-out infinite}
+@keyframes ring{0%,80%,100%{transform:rotate(0)}10%,30%{transform:rotate(-18deg)}20%,40%{transform:rotate(18deg)}}
+@keyframes glow{0%,100%{box-shadow:0 6px 28px rgba(245,196,0,.45)}50%{box-shadow:0 6px 40px rgba(245,196,0,.7),0 0 0 8px rgba(245,196,0,.1)}}
+
+/* ══════════════════════════════════════════
+   ADMIN PANEL
+══════════════════════════════════════════ */
+#admin-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(5,7,10,.97);backdrop-filter:blur(20px);overflow-y:auto}
+#admin-overlay.open{display:flex;flex-direction:column}
+
+/* Login */
+#admin-login{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:0}
+.login-box{background:var(--panel);border:1px solid var(--br);padding:48px 40px;width:360px;text-align:center}
+.login-logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--y);margin-bottom:4px;letter-spacing:.05em}
+.login-sub{font-size:.75rem;color:var(--gr);letter-spacing:.1em;text-transform:uppercase;margin-bottom:32px}
+.login-input{width:100%;background:var(--deep);border:1px solid var(--br);color:var(--wh);padding:13px 16px;font-family:'Barlow',sans-serif;font-size:.95rem;outline:none;margin-bottom:14px;text-align:center;letter-spacing:.2em}
+.login-input:focus{border-color:var(--y)}
+.login-btn{width:100%;background:var(--y);color:var(--bk);border:none;padding:13px;font-family:'Barlow',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.login-btn:hover{background:var(--or)}
+.login-err{color:#ff4444;font-size:.78rem;margin-top:10px;display:none}
+
+/* Dashboard */
+#admin-dash{display:none;flex-direction:column;min-height:100vh}
+.adm-header{background:var(--deep);border-bottom:1px solid var(--br);padding:0 32px;height:62px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.adm-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--y);letter-spacing:.05em}
+.adm-logo span{color:var(--gr);font-size:.8rem;font-family:'Barlow',sans-serif;font-weight:400;margin-left:10px;letter-spacing:.08em;text-transform:uppercase}
+.adm-nav{display:flex;gap:4px}
+.adm-tab{background:transparent;border:none;color:var(--gr);padding:8px 16px;font-family:'Barlow',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:color .2s,background .2s;border-radius:4px}
+.adm-tab:hover{color:var(--wh);background:var(--br)}
+.adm-tab.active{color:var(--bk);background:var(--y)}
+.adm-logout{background:transparent;border:1px solid var(--br);color:var(--gr);padding:7px 14px;font-family:'Barlow',sans-serif;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,color .2s}
+.adm-logout:hover{border-color:#ff4444;color:#ff4444}
+.adm-body{padding:32px;flex:1}
+
+/* Tab panels */
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.stat-box{background:var(--panel);border:1px solid var(--br);padding:20px 22px;border-left:3px solid var(--y)}
+.stat-box-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--y);line-height:1}
+.stat-box-l{font-size:.7rem;color:var(--gr);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+
+/* Section title */
+.adm-sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;letter-spacing:.03em;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.adm-sec-title::after{content:'';flex:1;height:1px;background:var(--br)}
+
+/* Add form card */
+.add-card{background:var(--panel);border:1px solid var(--br);padding:24px;margin-bottom:28px}
+.add-card-title{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--y);margin-bottom:18px}
+.adm-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.adm-row.one{grid-template-columns:1fr}
+.adm-fg{display:flex;flex-direction:column;gap:5px}
+.adm-fg label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gr)}
+.adm-fg input,.adm-fg select,.adm-fg textarea{background:var(--deep);border:1px solid var(--br);color:var(--wh);padding:10px 12px;font-family:'Barlow',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;width:100%;resize:vertical}
+.adm-fg input:focus,.adm-fg select:focus,.adm-fg textarea:focus{border-color:var(--y)}
+.adm-fg input::placeholder,.adm-fg textarea::placeholder{color:var(--br2)}
+.adm-fg select option{background:var(--deep)}
+.stars-pick{display:flex;gap:6px;margin-top:4px}
+.stars-pick span{font-size:1.4rem;cursor:pointer;color:var(--br2);transition:color .15s}
+.stars-pick span.on{color:var(--y)}
+.adm-btn{background:var(--y);color:var(--bk);border:none;padding:11px 28px;font-family:'Barlow',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.adm-btn:hover{background:var(--or)}
+.adm-btn.red{background:transparent;color:#ff4444;border:1px solid rgba(255,68,68,.3)}
+.adm-btn.red:hover{background:#ff4444;color:#fff}
+.adm-btn.blue{background:transparent;color:#60a5fa;border:1px solid rgba(96,165,250,.3)}
+.adm-btn.blue:hover{background:#60a5fa;color:#fff}
+
+/* Items list */
+.items-list{display:flex;flex-direction:column;gap:10px}
+.adm-item{background:var(--panel);border:1px solid var(--br);padding:16px 18px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s}
+.adm-item:hover{border-color:var(--br2)}
+.adm-item-img{width:64px;height:64px;object-fit:cover;border:1px solid var(--br);flex-shrink:0;display:none}
+.adm-item-img.has{display:block}
+.adm-item-body{flex:1;min-width:0}
+.adm-item-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.02em;margin-bottom:4px}
+.adm-item-sub{font-size:.8rem;color:var(--gr);line-height:1.5}
+.adm-item-stars{color:var(--y);font-size:.8rem;margin-bottom:3px}
+.adm-item-actions{display:flex;gap:8px;flex-shrink:0}
+
+/* Talepler table */
+.req-table{width:100%;border-collapse:collapse}
+.req-table th{background:var(--deep);color:var(--gr);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;text-align:left;border-bottom:1px solid var(--br)}
+.req-table td{padding:12px 14px;font-size:.85rem;border-bottom:1px solid var(--br);vertical-align:top}
+.req-table tr:hover td{background:rgba(255,255,255,.02)}
+.req-badge{display:inline-block;padding:3px 8px;font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.req-badge.new{background:rgba(245,196,0,.15);color:var(--y)}
+.req-badge.done{background:rgba(34,197,94,.12);color:var(--gn)}
+.req-wa{background:var(--gn);color:#fff;border:none;padding:5px 10px;font-size:.72rem;font-weight:700;cursor:pointer;letter-spacing:.05em;text-transform:uppercase}
+.req-del{background:transparent;color:#ff4444;border:1px solid rgba(255,68,68,.25);padding:5px 10px;font-size:.72rem;font-weight:700;cursor:pointer;text-transform:uppercase}
+.empty-state{text-align:center;padding:60px 20px;color:var(--gr);font-size:.9rem}
+.empty-state div{font-size:2rem;margin-bottom:12px}
+
+/* Contact edit */
+.contact-edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* Image preview */
+.img-preview{width:100%;max-height:120px;object-fit:cover;margin-top:8px;border:1px solid var(--br);display:none}
+
+/* Toast */
+#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--y);color:var(--bk);padding:12px 28px;font-weight:700;font-size:.85rem;letter-spacing:.05em;z-index:99999;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{display:none}.hero-side{display:none}
+  #neden-biz{grid-template-columns:1fr;gap:36px}
+  .contact-wrap{grid-template-columns:1fr}.crow{grid-template-columns:1fr}
+  .cta-strip{flex-direction:column;text-align:center}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .adm-row{grid-template-columns:1fr}
+  .contact-edit-grid{grid-template-columns:1fr}
+  .adm-nav{display:none}
+  .req-table{font-size:.75rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════ SITE ════════════════════ -->
+<header>
+  <a href="#anasayfa" class="logo">
+    <div class="logo-bolt">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </div>
+    <div class="logo-name">Çerkezköy<br/><em>Elektrikçi</em></div>
+  </a>
+  <nav>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#yorumlar">Yorumlar</a>
+    <a href="#neden-biz">Hakkımızda</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <a href="tel:+905531117226" class="nav-cta">📞 0553 111 72 26</a>
+</header>
+
+<section id="anasayfa">
+  <div class="hglow"></div><div class="hglow2"></div><div class="hgrid"></div>
+  <div class="badge"><span class="bdot"></span>7/24 Acil Servis · Çerkezköy &amp; Çevresi</div>
+  <h1 class="hero-h1" id="site-baslik">
+    <span class="l1">ÇERKEZKÖY</span>
+    <span class="l2">ELEKTRİK</span>
+    <span class="l3">USTASI</span>
+  </h1>
+  <p class="hero-p" id="site-aciklama">Arıza tespitinden kablo çekimine, aydınlatma tasarımından güvenlik kameralarına — tüm elektrik işleriniz garantili ve hızlı.</p>
+  <div class="hero-btns">
+    <a href="tel:+905531117226" class="btn-y"><span>📞</span> Hemen Ara: <span id="hero-tel">0553 111 72 26</span></a>
+    <a href="#hizmetler" class="btn-ghost">Hizmetlerimiz</a>
+  </div>
+  <div class="hero-side">
+    <div><div class="hs-num">500+</div><div class="hs-lbl">Tamamlanan İş</div></div>
+    <div><div class="hs-num">7/24</div><div class="hs-lbl">Acil Servis</div></div>
+    <div><div class="hs-num">10+</div><div class="hs-lbl">Yıl Deneyim</div></div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="tick">Elektrik Arıza</span><span class="tick tsep">✦</span><span class="tick">Bakım &amp; Onarım</span><span class="tick tsep">✦</span><span class="tick">Aydınlatma</span><span class="tick tsep">✦</span><span class="tick">Priz &amp; Sigorta</span><span class="tick tsep">✦</span><span class="tick">Avize Montajı</span><span class="tick tsep">✦</span><span class="tick">Kablo Çekimi</span><span class="tick tsep">✦</span><span class="tick">İnternet Hattı</span><span class="tick tsep">✦</span><span class="tick">Kamera Sistemleri</span><span class="tick tsep">✦</span>
+    <span class="tick">Elektrik Arıza</span><span class="tick tsep">✦</span><span class="tick">Bakım &amp; Onarım</span><span class="tick tsep">✦</span><span class="tick">Aydınlatma</span><span class="tick tsep">✦</span><span class="tick">Priz &amp; Sigorta</span><span class="tick tsep">✦</span><span class="tick">Avize Montajı</span><span class="tick tsep">✦</span><span class="tick">Kablo Çekimi</span><span class="tick tsep">✦</span><span class="tick">İnternet Hattı</span><span class="tick tsep">✦</span><span class="tick">Kamera Sistemleri</span><span class="tick tsep">✦</span>
+  </div>
+</div>
+
+<section id="hizmetler">
+  <div class="sp">Ne Yapıyoruz?</div>
+  <h2 class="sh2">Tüm Elektrik<br/>Hizmetleri</h2>
+  <p class="sd">Ev, iş yeri ve apartmanlarda kapsamlı elektrik çözümleri. Her iş titiz, hızlı ve garantili.</p>
+  <div class="srv-grid" id="srv-grid"></div>
+</section>
+
+<section id="yorumlar">
+  <div class="sp">Müşteri Yorumları</div>
+  <h2 class="sh2">Referanslarımız</h2>
+  <p class="sd">Hizmet verdiğimiz müşterilerimizin deneyimleri.</p>
+  <div class="rev-grid" id="rev-grid"></div>
+</section>
+
+<section id="neden-biz">
+  <div class="why-art">
+    <div class="why-big">NEDEN<br/>BİZ?</div>
+    <div class="why-chip"><div class="why-chip-n">10+</div><div class="why-chip-t">Yıl Sektör<br/>Deneyimi</div></div>
+  </div>
+  <div>
+    <div class="sp">Fark Yaratan Hizmet</div>
+    <h2 class="sh2">Güvenilir,<br/>Hızlı, Garantili</h2>
+    <p class="sd">Çerkezköy'de on yılı aşkın deneyimimizle her işi zamanında ve eksiksiz teslim ediyoruz.</p>
+    <ul class="why-ul">
+      <li class="why-li"><div class="why-dot"></div><div><div class="why-lt">7/24 Acil Müdahale</div><p class="why-ld">Gece ya da gündüz, arıza anında yanınızdayız.</p></div></li>
+      <li class="why-li"><div class="why-dot"></div><div><div class="why-lt">Lisanslı &amp; Sigortalı Ustalar</div><p class="why-ld">Tüm işler mesleki yeterliliğe sahip, sigortalı elektrikçiler tarafından yapılır.</p></div></li>
+      <li class="why-li"><div class="why-dot"></div><div><div class="why-lt">İşçilik Garantisi</div><p class="why-ld">Yaptığımız her iş garanti kapsamındadır. Sorun olursa ücretsiz döneriz.</p></div></li>
+      <li class="why-li"><div class="why-dot"></div><div><div class="why-lt">Net Fiyat, Sürpriz Yok</div><p class="why-ld">İş başlamadan fiyatı söyleriz, fatura keseriz, gizli ücret yoktur.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div>
+    <div class="cta-strip-t">ELEKTRİK ARIZANIZ MI VAR?<br/>HEMEN ARAYIN!</div>
+    <div class="cta-strip-s">7/24 ulaşılabilir · Çerkezköy &amp; Çevresi</div>
+  </div>
+  <a href="tel:+905531117226" class="btn-bk"><span>📞</span> <span id="cta-tel">0553 111 72 26</span></a>
+</div>
+
+<section id="iletisim">
+  <div class="sp">Bize Ulaşın</div>
+  <h2 class="sh2">İletişim</h2>
+  <p class="sd">Hemen arayın ya da formu doldurun, kısa sürede size dönelim.</p>
+  <div class="contact-wrap">
+    <div class="cinfo">
+      <div class="cblock"><div class="cico">📞</div><div><div class="clbl">Telefon</div><div class="cval" id="ct-tel">0553 111 72 26</div><div class="csub">7/24 Acil Hat</div></div></div>
+      <div class="cblock"><div class="cico">💬</div><div><div class="clbl">WhatsApp</div><div class="cval" id="ct-wa">0553 111 72 26</div><div class="csub">Fotoğraf ile hızlı teklif alın</div></div></div>
+      <div class="cblock"><div class="cico">📍</div><div><div class="clbl">Hizmet Bölgesi</div><div class="cval" id="ct-bolge">Çerkezköy &amp; Çevresi</div><div class="csub">Tekirdağ ili geneli</div></div></div>
+      <div class="cblock"><div class="cico">🕐</div><div><div class="clbl">Çalışma Saatleri</div><div class="cval" id="ct-saat">Her Gün 08:00 – 22:00</div><div class="csub">Acil durumlarda 7/24</div></div></div>
+    </div>
+    <form class="cform" onsubmit="handleForm(event)">
+      <div class="crow">
+        <div class="fg"><label for="ad">Ad Soyad</label><input type="text" id="ad" placeholder="Adınız" required/></div>
+        <div class="fg"><label for="tel">Telefon</label><input type="tel" id="tel" placeholder="05XX XXX XX XX" required/></div>
+      </div>
+      <div class="fg">
+        <label for="srv-sel">Hizmet Türü</label>
+        <select id="srv-sel"><option value="">Seçiniz...</option></select>
+      </div>
+      <div class="fg"><label for="msg">Mesajınız</label><textarea id="msg" rows="4" placeholder="Sorununuzu kısaca açıklayın..."></textarea></div>
+      <button type="submit" class="fsub">Talep Gönder →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="fcopy">© 2025 Çerkezköy Elektrikçi · <span id="ft-tel">0553 111 72 26</span></div>
+  <div class="flinks">
+    <a href="#anasayfa">Ana Sayfa</a><a href="#hizmetler">Hizmetler</a>
+    <a href="#yorumlar">Yorumlar</a><a href="#iletisim">İletişim</a>
+  </div>
+</footer>
+
+<div class="fcall"><a href="tel:+905531117226"><span class="fci">📞</span> Hemen Ara</a></div>
+
+<!-- ════════════════════ ADMIN PANEL ════════════════════ -->
+<div id="admin-overlay">
+
+  <!-- LOGIN -->
+  <div id="admin-login">
+    <div class="login-box">
+      <div class="login-logo">⚡ YÖNETİM</div>
+      <div class="login-sub">Çerkezköy Elektrikçi · Admin Panel</div>
+      <input type="password" class="login-input" id="login-pw" placeholder="••••••••" maxlength="20"/>
+      <button class="login-btn" onclick="doLogin()">GİRİŞ YAP</button>
+      <div class="login-err" id="login-err">❌ Şifre yanlış!</div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="admin-dash">
+    <div class="adm-header">
+      <div class="adm-logo">⚡ YÖNETİM <span>Çerkezköy Elektrikçi</span></div>
+      <div class="adm-nav">
+        <button class="adm-tab active" onclick="showTab('t-dash')">📊 Özet</button>
+        <button class="adm-tab" onclick="showTab('t-baslik')">🏠 Başlık</button>
+        <button class="adm-tab" onclick="showTab('t-srv')">🔧 Hizmetler</button>
+        <button class="adm-tab" onclick="showTab('t-rev')">⭐ Yorumlar</button>
+        <button class="adm-tab" onclick="showTab('t-tel')">📞 İletişim</button>
+        <button class="adm-tab" onclick="showTab('t-req')">📩 Talepler</button>
+      </div>
+      <button class="adm-logout" onclick="doLogout()">Çıkış</button>
+    </div>
+
+    <div class="adm-body">
+
+      <!-- ÖZET -->
+      <div class="tab-panel active" id="t-dash">
+        <div class="adm-sec-title">Genel Bakış</div>
+        <div class="stats-bar">
+          <div class="stat-box"><div class="stat-box-n" id="st-srv">0</div><div class="stat-box-l">Hizmet</div></div>
+          <div class="stat-box"><div class="stat-box-n" id="st-rev">0</div><div class="stat-box-l">Yorum</div></div>
+          <div class="stat-box"><div class="stat-box-n" id="st-req">0</div><div class="stat-box-l">Toplam Talep</div></div>
+          <div class="stat-box"><div class="stat-box-n" id="st-new">0</div><div class="stat-box-l">Yeni Talep</div></div>
+        </div>
+        <p style="color:var(--gr);font-size:.88rem;line-height:1.7">Sol üstteki sekmelerden hizmetleri, yorumları, iletişim bilgilerini ve gelen talepleri yönetebilirsin. Tüm değişiklikler otomatik kaydedilir ve siteye anında yansır.</p>
+      </div>
+
+      <!-- BAŞLIK / AÇIKLAMA -->
+      <div class="tab-panel" id="t-baslik">
+        <div class="adm-sec-title">Site Başlığı &amp; Açıklaması</div>
+        <div class="add-card">
+          <div class="add-card-title">Hero Bölümü Metinleri</div>
+          <div class="adm-row one">
+            <div class="adm-fg"><label>Ana Başlık (3. Satır — sarı renk)</label><input type="text" id="b-baslik" placeholder="USTASI"/></div>
+          </div>
+          <div class="adm-row one">
+            <div class="adm-fg"><label>Açıklama Metni</label><textarea id="b-aciklama" rows="3" placeholder="Kısa açıklama..."></textarea></div>
+          </div>
+          <div class="adm-row one">
+            <div class="adm-fg"><label>Resim URL'si (Opsiyonel — hero arka planı için)</label><input type="url" id="b-resim" placeholder="https://..."/></div>
+          </div>
+          <button class="adm-btn" onclick="saveBaslik()" style="margin-top:8px">Kaydet &amp; Yayınla</button>
+        </div>
+      </div>
+
+      <!-- HİZMETLER -->
+      <div class="tab-panel" id="t-srv">
+        <div class="adm-sec-title">Hizmet Yönetimi</div>
+        <div class="add-card">
+          <div class="add-card-title">Yeni Hizmet Ekle</div>
+          <div class="adm-row">
+            <div class="adm-fg"><label>Hizmet Adı</label><input type="text" id="ns-name" placeholder="örn. Elektrik Arıza"/></div>
+            <div class="adm-fg"><label>İkon (emoji)</label><input type="text" id="ns-ico" placeholder="⚡" style="font-size:1.3rem"/></div>
+          </div>
+          <div class="adm-row one">
+            <div class="adm-fg"><label>Açıklama</label><textarea id="ns-desc" rows="2" placeholder="Kısa açıklama..."></textarea></div>
+          </div>
+          <div class="adm-row one">
+            <div class="adm-fg">
+              <label>Resim (Opsiyonel)</label>
+              <input type="file" id="ns-img-file" accept="image/*" onchange="previewImg(this,'ns-img-prev','ns-img-b64')"/>
+              <input type="text" id="ns-img-url" placeholder="veya resim URL'si yapıştır"/>
+              <img id="ns-img-prev" class="img-preview"/>
+              <input type="hidden" id="ns-img-b64"/>
+            </div>
+          </div>
+          <button class="adm-btn" onclick="addService()" style="margin-top:4px">+ Hizmet Ekle</button>
+        </div>
+        <div class="adm-sec-title">Mevcut Hizmetler</div>
+        <div class="items-list" id="adm-srv-list"></div>
+      </div>
+
+      <!-- YORUMLAR -->
+      <div class="tab-panel" id="t-rev">
+        <div class="adm-sec-title">Yorum Yönetimi</div>
+        <div class="add-card">
+          <div class="add-card-title">Yeni Yorum Ekle</div>
+          <div class="adm-row">
+            <div class="adm-fg"><label>Ad Soyad (örn. Ahmet B.)</label><input type="text" id="nr-name" placeholder="Ahmet B."/></div>
+            <div class="adm-fg"><label>Konum</label><input type="text" id="nr-loc" placeholder="Çerkezköy"/></div>
+          </div>
+          <div class="adm-row one">
+            <div class="adm-fg"><label>Yorum Metni</label><textarea id="nr-text" rows="3" placeholder="Müşteri yorumu..."></textarea></div>
+          </div>
+          <div class="adm-fg" style="margin-bottom:14px">
+            <label>Yıldız</label>
+            <div class="stars-pick" id="stars-pick">
+              <span onclick="setStar(1)">★</span><span onclick="setStar(2)">★</span><span onclick="setStar(3)">★</span><span onclick="setStar(4)">★</span><span onclick="setStar(5)">★</span>
+            </div>
+          </div>
+          <button class="adm-btn" onclick="addReview()">+ Yorum Ekle</button>
+        </div>
+        <div class="adm-sec-title">Mevcut Yorumlar</div>
+        <div class="items-list" id="adm-rev-list"></div>
+      </div>
+
+      <!-- İLETİŞİM -->
+      <div class="tab-panel" id="t-tel">
+        <div class="adm-sec-title">İletişim Bilgileri</div>
+        <div class="add-card">
+          <div class="add-card-title">Bilgileri Güncelle</div>
+          <div class="contact-edit-grid">
+            <div class="adm-fg"><label>Telefon</label><input type="text" id="ci-tel" placeholder="0553 111 72 26"/></div>
+            <div class="adm-fg"><label>WhatsApp Numarası (başında 90 ile)</label><input type="text" id="ci-wa" placeholder="905531117226"/></div>
+            <div class="adm-fg"><label>Hizmet Bölgesi</label><input type="text" id="ci-bolge" placeholder="Çerkezköy &amp; Çevresi"/></div>
+            <div class="adm-fg"><label>Çalışma Saatleri</label><input type="text" id="ci-saat" placeholder="Her Gün 08:00 – 22:00"/></div>
+          </div>
+          <button class="adm-btn" onclick="saveContact()" style="margin-top:16px">Kaydet &amp; Yayınla</button>
+        </div>
+      </div>
+
+      <!-- TALEPLER -->
+      <div class="tab-panel" id="t-req">
+        <div class="adm-sec-title">Gelen Talepler</div>
+        <div style="display:flex;gap:10px;margin-bottom:20px">
+          <button class="adm-btn blue" onclick="markAllDone()">Tümünü Okundu İşaretle</button>
+          <button class="adm-btn red" onclick="clearRequests()">Tümünü Sil</button>
+        </div>
+        <div id="req-wrap"></div>
+      </div>
+
+    </div><!-- adm-body -->
+  </div><!-- admin-dash -->
+</div><!-- admin-overlay -->
+
+<div id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════
+//  DEFAULTS & STORAGE
+// ═══════════════════════════════════════════
+const ADMIN_PASS = 'elektrik2025';
+const KEY = {
+  srv: 'ce_services', rev: 'ce_reviews',
+  req: 'ce_requests', ci: 'ce_contact',
+  baslik: 'ce_baslik'
+};
+
+const DEFAULT_SERVICES = [
+  {id:1,ico:'⚡',name:'Elektrik Arıza',desc:'Sigorta atması, kaçak akım, devre kesintisi — tüm ani arızalara 7/24 hızlı müdahale.',img:''},
+  {id:2,ico:'🔧',name:'Bakım & Onarım',desc:'Periyodik elektrik bakımı, eski tesisatın yenilenmesi, tablo değişimi ve onarım işlemleri.',img:''},
+  {id:3,ico:'💡',name:'Aydınlatma',desc:'LED, spot, sarkıt, dekoratif aydınlatma tasarımı ve montajı. Ev ve iş yeri çözümleri.',img:''},
+  {id:4,ico:'🔌',name:'Priz & Sigorta',desc:'Topraklı priz montajı, kombi sigortası, akıllı priz ve şalter kurulumu.',img:''},
+  {id:5,ico:'🪔',name:'Avize Montajı',desc:'Her tip avize, sarkıt ve tavan armatürü montajı güvenli ve özenle yapılır.',img:''},
+  {id:6,ico:'📡',name:'Kablo Çekimi',desc:'Gizli/açık kablo çekimi, boru içi tesisat ve tablo bağlantısı hizmetleri.',img:''},
+  {id:7,ico:'🌐',name:'İnternet & Network',desc:'Cat6 altyapısı, fiber hat yönlendirme, switch montajı ve modem kurulumu.',img:''},
+  {id:8,ico:'📷',name:'Kamera Sistemleri',desc:'IP kamera, DVR/NVR kurulumu, uzaktan izleme yapılandırması. Eviniz güvende.',img:''}
+];
+const DEFAULT_REVIEWS = [
+  {id:1,name:'Mehmet K.',loc:'Çerkezköy',stars:5,text:"Gece 11'de sigortam attı, aradım — yarım saat içinde kapımdaydı. Sorunu hızla çözdü, ücret de makul. Kesinlikle tavsiye ederim."},
+  {id:2,name:'Ayşe T.',loc:'Çerkezköy',stars:5,text:'Daire boyunca kablo çekimi ve yeni priz takımı yaptırdık. İşi temiz yaptı, ortalığı dağıtmadan çıktı. Çok memnun kaldık.'},
+  {id:3,name:'Hasan D.',loc:'Kapaklı',stars:5,text:'Kamera sistemi kurulumu için aradım. Fiyat net söyledi, randevu günü tam zamanında geldi. Sistem harika çalışıyor.'},
+  {id:4,name:'Fatma Ö.',loc:'Çerkezköy',stars:5,text:'Salonumuza avize taktırdık, çok özenli çalıştı. Tavan çok güzel çıktı, hiç iz bırakmadı. Sürpriz ücret de çıkmadı.'},
+  {id:5,name:'Ercan B.',loc:'Çerkezköy Sanayi',stars:5,text:'İş yerimizin internet altyapısını sıfırdan kurdu. Cat6 çekimi, switch ve modem dahil her şeyi halletti. Profesyoneldi.'}
+];
+const DEFAULT_CONTACT = {tel:'0553 111 72 26',wa:'905531117226',bolge:'Çerkezköy & Çevresi',saat:'Her Gün 08:00 – 22:00'};
+const DEFAULT_BASLIK = {baslik:'USTASI',aciklama:'Arıza tespitinden kablo çekimine, aydınlatma tasarımından güvenlik kameralarına — tüm elektrik işleriniz garantili ve hızlı.',resim:''};
+
+function load(key,def){try{const v=localStorage.getItem(key);return v?JSON.parse(v):def;}catch{return def;}}
+function save(key,val){localStorage.setItem(key,JSON.stringify(val));}
+
+let services=load(KEY.srv,DEFAULT_SERVICES);
+let reviews=load(KEY.rev,DEFAULT_REVIEWS);
+let requests=load(KEY.req,[]);
+let contact=load(KEY.ci,DEFAULT_CONTACT);
+let baslik=load(KEY.baslik,DEFAULT_BASLIK);
+let selStars=5;
+let nextId=Date.now();
+
+// ═══════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+
+// ═══════════════════════════════════════════
+//  SITE RENDER
+// ═══════════════════════════════════════════
+function renderSite(){
+  // baslik
+  document.querySelector('.hero-h1 .l3').textContent=baslik.baslik||'USTASI';
+  document.getElementById('site-aciklama').textContent=baslik.aciklama;
+
+  // iletisim
+  document.getElementById('hero-tel').textContent=contact.tel;
+  document.getElementById('cta-tel').textContent=contact.tel;
+  document.getElementById('ct-tel').textContent=contact.tel;
+  document.getElementById('ct-wa').textContent=contact.tel;
+  document.getElementById('ct-bolge').innerHTML=contact.bolge;
+  document.getElementById('ct-saat').textContent=contact.saat;
+  document.getElementById('ft-tel').textContent=contact.tel;
+  document.querySelector('.fcall a').href='tel:+9'+contact.wa;
+
+  // services grid
+  const sg=document.getElementById('srv-grid');
+  if(!services.length){sg.innerHTML='<p style="padding:40px;color:var(--gr)">Henüz hizmet eklenmedi.</p>';return;}
+  sg.innerHTML=services.map((s,i)=>`
+    <article class="srv-card">
+      ${s.img?`<img class="srv-img has-img" src="${s.img}" alt="${s.name}" loading="lazy"/>`:''}
+      <div class="srv-ico">${s.ico}</div>
+      <h3 class="srv-name">${s.name}</h3>
+      <p class="srv-desc">${s.desc}</p>
+      <span class="srv-n">${String(i+1).padStart(2,'0')}</span>
+    </article>`).join('');
+
+  // form select
+  const sel=document.getElementById('srv-sel');
+  sel.innerHTML='<option value="">Seçiniz...</option>'+services.map(s=>`<option>${s.name}</option>`).join('');
+
+  // reviews grid
+  const rg=document.getElementById('rev-grid');
+  if(!reviews.length){rg.innerHTML='<p style="padding:40px;color:var(--gr)">Henüz yorum eklenmedi.</p>';return;}
+  rg.innerHTML=reviews.map(r=>`
+    <div class="rev-card">
+      <div class="rev-q">"</div>
+      <div class="rev-stars">${'★'.repeat(r.stars)}</div>
+      <p class="rev-text">${r.text}</p>
+      <div class="rev-author">
+        <div class="rev-av">${r.name.charAt(0)}</div>
+        <div><div class="rev-name">${r.name}</div><div class="rev-loc">${r.loc}</div></div>
+      </div>
+    </div>`).join('');
+
+  // scroll reveal
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.srv-card,.rev-card,.cblock').forEach(el=>{
+      el.style.cssText+='opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease,border-color .25s,background .25s';
+      io.observe(el);
+    });
+  });
+}
+
+// ═══════════════════════════════════════════
+//  ADMIN RENDER
+// ═══════════════════════════════════════════
+function renderAdmin(){
+  // stats
+  document.getElementById('st-srv').textContent=services.length;
+  document.getElementById('st-rev').textContent=reviews.length;
+  document.getElementById('st-req').textContent=requests.length;
+  document.getElementById('st-new').textContent=requests.filter(r=>r.status==='new').length;
+
+  // baslik fields
+  document.getElementById('b-baslik').value=baslik.baslik||'USTASI';
+  document.getElementById('b-aciklama').value=baslik.aciklama;
+  document.getElementById('b-resim').value=baslik.resim||'';
+
+  // contact fields
+  document.getElementById('ci-tel').value=contact.tel;
+  document.getElementById('ci-wa').value=contact.wa;
+  document.getElementById('ci-bolge').value=contact.bolge;
+  document.getElementById('ci-saat').value=contact.saat;
+
+  // services admin list
+  const sl=document.getElementById('adm-srv-list');
+  if(!services.length){sl.innerHTML='<div class="empty-state"><div>🔧</div>Henüz hizmet yok. Ekle!</div>';
+  }else{
+    sl.innerHTML=services.map(s=>`
+      <div class="adm-item">
+        ${s.img?`<img class="adm-item-img has" src="${s.img}" alt=""/>`:''}
+        <div class="adm-item-body">
+          <div class="adm-item-title">${s.ico} ${s.name}</div>
+          <div class="adm-item-sub">${s.desc.substring(0,80)}...</div>
+        </div>
+        <div class="adm-item-actions">
+          <button class="adm-btn red" onclick="delService(${s.id})">Sil</button>
+        </div>
+      </div>`).join('');
+  }
+
+  // reviews admin list
+  const rl=document.getElementById('adm-rev-list');
+  if(!reviews.length){rl.innerHTML='<div class="empty-state"><div>⭐</div>Henüz yorum yok. Ekle!</div>';
+  }else{
+    rl.innerHTML=reviews.map(r=>`
+      <div class="adm-item">
+        <div class="adm-item-body">
+          <div class="adm-item-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+          <div class="adm-item-title">${r.name} · ${r.loc}</div>
+          <div class="adm-item-sub">${r.text.substring(0,100)}...</div>
+        </div>
+        <div class="adm-item-actions">
+          <button class="adm-btn red" onclick="delReview(${r.id})">Sil</button>
+        </div>
+      </div>`).join('');
+  }
+
+  // requests table
+  const rw=document.getElementById('req-wrap');
+  if(!requests.length){
+    rw.innerHTML='<div class="empty-state"><div>📩</div>Henüz gelen talep yok.</div>';
+  }else{
+    const rows=requests.slice().reverse().map(r=>`
+      <tr>
+        <td><span class="req-badge ${r.status==='new'?'new':'done'}">${r.status==='new'?'YENİ':'OKUNDU'}</span></td>
+        <td><strong>${r.ad}</strong><br/><small style="color:var(--gr)">${r.date}</small></td>
+        <td>${r.telefon}</td>
+        <td>${r.hizmet||'—'}</td>
+        <td style="max-width:200px">${r.mesaj||'—'}</td>
+        <td>
+          <button class="req-wa" onclick="waReq(${r.id})">WhatsApp</button>
+          <button class="req-del" onclick="delReq(${r.id})" style="margin-left:4px">Sil</button>
+        </td>
+      </tr>`).join('');
+    rw.innerHTML=`<table class="req-table"><thead><tr><th>Durum</th><th>Ad / Tarih</th><th>Telefon</th><th>Hizmet</th><th>Mesaj</th><th>İşlem</th></tr></thead><tbody>${rows}</tbody></table>`;
+    // mark all as read
+    requests.forEach(r=>r.status='read');
+    save(KEY.req,requests);
+    document.getElementById('st-new').textContent=0;
+  }
+}
+
+// ═══════════════════════════════════════════
+//  SERVICE CRUD
+// ═══════════════════════════════════════════
+function addService(){
+  const name=document.getElementById('ns-name').value.trim();
+  const ico=document.getElementById('ns-ico').value.trim()||'⚡';
+  const desc=document.getElementById('ns-desc').value.trim();
+  const imgB64=document.getElementById('ns-img-b64').value;
+  const imgUrl=document.getElementById('ns-img-url').value.trim();
+  if(!name||!desc){toast('⚠️ Ad ve açıklama zorunlu!');return;}
+  const img=imgB64||imgUrl||'';
+  services.push({id:nextId++,ico,name,desc,img});
+  save(KEY.srv,services);
+  renderSite();renderAdmin();
+  document.getElementById('ns-name').value='';document.getElementById('ns-ico').value='';
+  document.getElementById('ns-desc').value='';document.getElementById('ns-img-b64').value='';
+  document.getElementById('ns-img-url').value='';document.getElementById('ns-img-prev').style.display='none';
+  toast('✅ Hizmet eklendi!');
+}
+function delService(id){
+  if(!confirm('Bu hizmeti silmek istediğinize emin misiniz?'))return;
+  services=services.filter(s=>s.id!==id);save(KEY.srv,services);renderSite();renderAdmin();toast('🗑️ Hizmet silindi.');
+}
+
+// ═══════════════════════════════════════════
+//  REVIEW CRUD
+// ═══════════════════════════════════════════
+function setStar(n){
+  selStars=n;
+  document.querySelectorAll('#stars-pick span').forEach((s,i)=>s.classList.toggle('on',i<n));
+}
+setStar(5);
+function addReview(){
+  const name=document.getElementById('nr-name').value.trim();
+  const loc=document.getElementById('nr-loc').value.trim()||'Çerkezköy';
+  const text=document.getElementById('nr-text').value.trim();
+  if(!name||!text){toast('⚠️ İsim ve yorum zorunlu!');return;}
+  reviews.push({id:nextId++,name,loc,stars:selStars,text});
+  save(KEY.rev,reviews);renderSite();renderAdmin();
+  document.getElementById('nr-name').value='';document.getElementById('nr-loc').value='';
+  document.getElementById('nr-text').value='';setStar(5);
+  toast('✅ Yorum eklendi!');
+}
+function delReview(id){
+  if(!confirm('Bu yorumu silmek istediğinize emin misiniz?'))return;
+  reviews=reviews.filter(r=>r.id!==id);save(KEY.rev,reviews);renderSite();renderAdmin();toast('🗑️ Yorum silindi.');
+}
+
+// ═══════════════════════════════════════════
+//  CONTACT SAVE
+// ═══════════════════════════════════════════
+function saveContact(){
+  contact={
+    tel:document.getElementById('ci-tel').value.trim()||contact.tel,
+    wa:document.getElementById('ci-wa').value.trim()||contact.wa,
+    bolge:document.getElementById('ci-bolge').value.trim()||contact.bolge,
+    saat:document.getElementById('ci-saat').value.trim()||contact.saat
+  };
+  save(KEY.ci,contact);renderSite();toast('✅ İletişim bilgileri güncellendi!');
+}
+
+// ═══════════════════════════════════════════
+//  BASLIK SAVE
+// ═══════════════════════════════════════════
+function saveBaslik(){
+  baslik={
+    baslik:document.getElementById('b-baslik').value.trim()||baslik.baslik,
+    aciklama:document.getElementById('b-aciklama').value.trim()||baslik.aciklama,
+    resim:document.getElementById('b-resim').value.trim()
+  };
+  save(KEY.baslik,baslik);renderSite();toast('✅ Başlık güncellendi!');
+}
+
+// ═══════════════════════════════════════════
+//  REQUESTS
+// ═══════════════════════════════════════════
+function delReq(id){
+  requests=requests.filter(r=>r.id!==id);save(KEY.req,requests);renderAdmin();toast('🗑️ Talep silindi.');
+}
+function waReq(id){
+  const r=requests.find(x=>x.id===id);if(!r)return;
+  const metin=`🔔 *TALEBİ GÖRÜNTÜLE*\n\n👤 *Ad:* ${r.ad}\n📞 *Tel:* ${r.telefon}\n🔧 *Hizmet:* ${r.hizmet||'—'}\n💬 *Mesaj:* ${r.mesaj||'—'}`;
+  window.open(`https://wa.me/${contact.wa}?text=${encodeURIComponent(metin)}`, '_blank');
+}
+function markAllDone(){
+  requests.forEach(r=>r.status='read');save(KEY.req,requests);renderAdmin();toast('✅ Tümü okundu işaretlendi.');
+}
+function clearRequests(){
+  if(!confirm('Tüm talepler silinecek. Emin misiniz?'))return;
+  requests=[];save(KEY.req,requests);renderAdmin();toast('🗑️ Tüm talepler silindi.');
+}
+
+// ═══════════════════════════════════════════
+//  IMAGE PREVIEW
+// ═══════════════════════════════════════════
+function previewImg(input,prevId,b64Id){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const img=document.getElementById(prevId);
+    img.src=e.target.result;img.style.display='block';
+    document.getElementById(b64Id).value=e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+// ═══════════════════════════════════════════
+//  ADMIN LOGIN / LOGOUT
+// ═══════════════════════════════════════════
+function doLogin(){
+  const pw=document.getElementById('login-pw').value;
+  if(pw===ADMIN_PASS){
+    document.getElementById('admin-login').style.display='none';
+    document.getElementById('admin-dash').style.display='flex';
+    renderAdmin();
+  }else{
+    const err=document.getElementById('login-err');
+    err.style.display='block';
+    document.getElementById('login-pw').value='';
+    setTimeout(()=>err.style.display='none',2500);
+  }
+}
+function doLogout(){
+  document.getElementById('admin-overlay').classList.remove('open');
+  document.getElementById('admin-login').style.display='flex';
+  document.getElementById('admin-dash').style.display='none';
+  document.getElementById('login-pw').value='';
+}
+document.getElementById('login-pw').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+
+// ═══════════════════════════════════════════
+//  TAB SWITCH
+// ═══════════════════════════════════════════
+function showTab(id){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.adm-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ═══════════════════════════════════════════
+//  HIDDEN ADMIN TRIGGER
+//  → Footer copyright alanına 5 kez tıkla
+// ═══════════════════════════════════════════
+let clickCount=0, clickTimer=null;
+document.querySelector('.fcopy').addEventListener('click',()=>{
+  clickCount++;
+  clearTimeout(clickTimer);
+  clickTimer=setTimeout(()=>clickCount=0, 1500);
+  if(clickCount>=5){
+    clickCount=0;
+    document.getElementById('admin-overlay').classList.add('open');
+    document.getElementById('admin-login').style.display='flex';
+    document.getElementById('admin-dash').style.display='none';
+  }
+});
+
+// ═══════════════════════════════════════════
+//  FORM SUBMIT → WhatsApp + kaydet
+// ═══════════════════════════════════════════
+function handleForm(e){
+  e.preventDefault();
+  const ad=document.getElementById('ad').value.trim();
+  const telefon=document.getElementById('tel').value.trim();
+  const hizmet=document.getElementById('srv-sel').value||'Belirtilmedi';
+  const mesaj=document.getElementById('msg').value.trim()||'Belirtilmedi';
+  const now=new Date();
+  const date=`${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'})}`;
+  requests.push({id:nextId++,ad,telefon,hizmet,mesaj,date,status:'new'});
+  save(KEY.req,requests);
+  const metin=`🔔 *YENİ TALEBİNİZ VAR!*\n\n👤 *Ad Soyad:* ${ad}\n📞 *Telefon:* ${telefon}\n🔧 *Hizmet Türü:* ${hizmet}\n💬 *Mesaj:* ${mesaj}\n📅 *Tarih:* ${date}\n\n_Çerkezköy Elektrikçi Web Sitesi_`;
+  const btn=e.target.querySelector('.fsub');
+  btn.textContent='✓ WhatsApp Açılıyor...';btn.style.background='#22c55e';
+  setTimeout(()=>{
+    window.open(`https://wa.me/${contact.wa}?text=${encodeURIComponent(metin)}`,'_blank');
+    btn.textContent='Talep Gönder →';btn.style.background='';
+    e.target.reset();
+  },800);
+}
+
+// ═══════════════════════════════════════════
+//  SCROLL REVEAL
+// ═══════════════════════════════════════════
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}
+  });
+},{threshold:.08});
+
+// ═══════════════════════════════════════════
+//  NAV HIGHLIGHT
+// ═══════════════════════════════════════════
+const secs=document.querySelectorAll('section[id]');
+const navAs=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-90)cur=s.id;});
+  navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--y)':'';});
+});
+
+// ═══════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════
+renderSite();
+</script>
+</body>
+</html>
